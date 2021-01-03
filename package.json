@@ -5,22 +5,27 @@
     "lambda-ts-demo": "bin/lambda-ts-demo.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf dist && tsc",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.81.0",
+    "@types/aws-lambda": "^8.10.68",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
-    "jest": "^26.4.2",
-    "ts-jest": "^26.2.0",
     "aws-cdk": "1.81.0",
+    "aws-sdk": "^2.820.0",
+    "jest": "^26.4.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.2.0",
     "ts-node": "^9.0.0",
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/aws-iam": "^1.81.0",
+    "@aws-cdk/aws-lambda": "^1.81.0",
     "@aws-cdk/core": "1.81.0",
     "source-map-support": "^0.5.16"
   }
